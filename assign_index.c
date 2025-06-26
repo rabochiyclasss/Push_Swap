@@ -1,41 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   assign_index.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: student <student@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/25 19:26:13 by ibudko            #+#    #+#             */
-/*   Updated: 2025/06/26 14:52:31 by student          ###   ########.fr       */
+/*   Created: 2025/06/26 14:41:26 by student           #+#    #+#             */
+/*   Updated: 2025/06/26 14:46:03 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	exit_simple_error(void)
+int	is_sortded(t_node *stack)
 {
-	ft_printf("Error\n");
-	exit(EXIT_FAILURE);
-}
-
-void	exit_error(t_node **a)
-{
-	if (a)
-		free_stack(a);
-	ft_printf("Error\n");
-	exit(EXIT_FAILURE);
-}
-
-void	free_stack(t_node **stack)
-{
-	t_node	*tmp;
-
-	if (!stack || !*stack)
-		return ;
-	while (*stack)
+	if (!stack)
+		return (1);
+	while (stack->next)
 	{
-		tmp = (*stack)->next;
-		free(*stack);
-		*stack = tmp;
+		if (stack->value > stack->next->value)
+			return (0);
+		stack = stack->next;
 	}
+	return (1);
 }

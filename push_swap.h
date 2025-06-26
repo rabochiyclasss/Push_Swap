@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibudko <ibudko@student.42.fr>              +#+  +:+       +#+        */
+/*   By: student <student@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 15:09:44 by ibudko            #+#    #+#             */
-/*   Updated: 2025/06/25 17:16:02 by ibudko           ###   ########.fr       */
+/*   Updated: 2025/06/26 14:52:51 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,10 @@ typedef struct s_cost
 	int	num;
 }	t_cost;
 
-int	parse_args(int argc, char **argv, t_node **a);
+int		parse_args(int argc, char **argv, t_node **a);
+int		is_sortded(t_node *stack);
+void	exit_simple_error(void);
+void	exit_error(t_node **a);
+void	free_stack(t_node **stack);
 
 #endif
