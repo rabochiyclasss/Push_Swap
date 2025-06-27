@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibudko <ibudko@student.42.fr>              +#+  +:+       +#+        */
+/*   By: student <student@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 15:22:37 by ibudko            #+#    #+#             */
-/*   Updated: 2025/06/25 17:17:21 by ibudko           ###   ########.fr       */
+/*   Updated: 2025/06/27 10:44:24 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,18 @@
 
 
 
-
+void	sort_stack(t_node **a, t_node **b)
+{
+	int	size;
+	
+	size = stack_size(*a);
+	if (is_sorted(*a))
+		return ;
+	if (size <= 5)
+		sort_small(a, b);
+	else
+		sort_large(a, b);
+}
 
 int	main(int argc, char **argv)
 {
