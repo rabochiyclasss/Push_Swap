@@ -1,47 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate_operations.c                                :+:      :+:    :+:   */
+/*   reverse_rotate_operations.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivanbudko <ivanbudko@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/27 16:12:03 by ivanbudko         #+#    #+#             */
-/*   Updated: 2025/06/28 13:40:11 by ivanbudko        ###   ########.fr       */
+/*   Created: 2025/06/28 13:39:23 by ivanbudko         #+#    #+#             */
+/*   Updated: 2025/06/28 13:39:48 by ivanbudko        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rotate(t_node **stack)//add to .h
+void	reverse_rotate(t_node **stack)
 {
-	t_node *last;
-	t_node *first;
+	t_node	*prev;
+	t_node	*last;
 
-	if(!stack || !*stack || !((*stack)->next))
+	if (!stack || !*stack || !(*stack)->next)
 		return ;
-	first = *stack;
-	*stack = first->next;
+	prev = NULL;
 	last = *stack;
-	while(last->next)
+	while (last->next)
+	{
+		prev = last;
 		last = last->next;
-	last->next = first;
-	first->next = NULL;
-}
-void	ra(t_node **a)
-{
-	rotate(a);
-	ft_printf("ra\n");
+	}
+	prev->next = NULL;
+	last->next = *stack;
+	*stack = last;
 }
 
-void	rb(t_node **b)
+void	rra(t_node **a)
 {
-	rotate(b);
-	ft_printf("rb\n");
+	reverse_rotate(a);
+	ft_printf("rra\n");
 }
 
-void	rr(t_node **a, t_node **b)
+void	rrb(t_node **b)
 {
-	rotate(a);
-	rotate(b);
-	ft_printf("rr\n");
+	reverse_rotate(b);
+	ft_printf("rrb\n");
+}
+
+void	rrr(t_node **a, t_node **b)
+{
+	reverse_rotate(a);
+	reverse_rotate(b);
+	ft_printf("rrr\n");
 }

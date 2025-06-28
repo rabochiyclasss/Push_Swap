@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: student <student@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ivanbudko <ivanbudko@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/25 15:22:37 by ibudko            #+#    #+#             */
-/*   Updated: 2025/06/27 10:44:24 by student          ###   ########.fr       */
+/*   Created: 2025/06/28 13:22:25 by ivanbudko         #+#    #+#             */
+/*   Updated: 2025/06/28 13:22:50 by ivanbudko        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-
 
 void	sort_stack(t_node **a, t_node **b)
 {

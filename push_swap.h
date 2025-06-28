@@ -6,7 +6,7 @@
 /*   By: ivanbudko <ivanbudko@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 15:09:44 by ibudko            #+#    #+#             */
-/*   Updated: 2025/06/27 16:06:58 by ivanbudko        ###   ########.fr       */
+/*   Updated: 2025/06/28 13:35:09 by ivanbudko        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,10 @@ void	sort_four(t_node **a, t_node **b);
 void	sort_five(t_node **a, t_node **b);
 void	sort_small(t_node **a, t_node **b);
 int		find_min_pos(t_node *stack);
+void	rotate(t_node **stack);
+void	ra(t_node **a);
+void	rb(t_node **b);
+void	rr(t_node **a, t_node **b);
+void	reverse_rotate(t_node **stack);
 
 #endif

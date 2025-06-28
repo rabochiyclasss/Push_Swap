@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   small_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: student <student@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ivanbudko <ivanbudko@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 10:46:08 by student           #+#    #+#             */
-/*   Updated: 2025/06/27 11:26:14 by student          ###   ########.fr       */
+/*   Updated: 2025/06/28 13:31:50 by ivanbudko        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	sort_two(t_node **a)
 		sa(a);
 }
 
-int	find_min_pos(t_node *stack)
+int	find_min_pos(t_node *stack)// finds index of smallest value
 {
 	int		min;
 	int		pos;
