@@ -6,7 +6,7 @@
 /*   By: ivanbudko <ivanbudko@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 10:46:08 by student           #+#    #+#             */
-/*   Updated: 2025/06/28 13:31:50 by ivanbudko        ###   ########.fr       */
+/*   Updated: 2025/06/28 16:00:15 by ivanbudko        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	sort_two(t_node **a)
 		sa(a);
 }
 
-int	find_min_pos(t_node *stack)// finds index of smallest value
+int	find_min_pos(t_node *stack)// finds the position of the node with smallest value
 {
 	int		min;
 	int		pos;
