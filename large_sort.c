@@ -6,7 +6,7 @@
 /*   By: ivanbudko <ivanbudko@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 15:07:50 by ivanbudko         #+#    #+#             */
-/*   Updated: 2025/06/28 19:46:07 by ivanbudko        ###   ########.fr       */
+/*   Updated: 2025/07/14 16:13:33 by ivanbudko        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	turk_sort(t_node **stack_a, t_node **stack_b)//add. h
 	sort_three(stack_a);
 	while (*stack_b)
 	{
-		min_cost = find_min_cost_element(*stack_a, *stack_a);//2
+		min_cost = find_min_cost_element(*stack_a, *stack_b);//2
 		apply_rotations(stack_a, stack_b, min_cost);//3
 		pa(stack_a, stack_b);
 	}

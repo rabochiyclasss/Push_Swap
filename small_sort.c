@@ -6,7 +6,7 @@
 /*   By: ivanbudko <ivanbudko@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 10:46:08 by student           #+#    #+#             */
-/*   Updated: 2025/06/28 16:00:15 by ivanbudko        ###   ########.fr       */
+/*   Updated: 2025/07/14 16:12:57 by ivanbudko        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	find_min_pos(t_node *stack)// finds the position of the node with smallest v
 	t_node	*current;
 
 	if (!stack)
-		retrun (-1);
+		return (-1);
 	current = stack;
 	min = current->value;
 	pos = 0;

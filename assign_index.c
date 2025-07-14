@@ -6,7 +6,7 @@
 /*   By: ivanbudko <ivanbudko@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 14:41:26 by student           #+#    #+#             */
-/*   Updated: 2025/06/28 13:32:38 by ivanbudko        ###   ########.fr       */
+/*   Updated: 2025/07/14 16:11:53 by ivanbudko        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	assign_index(t_node *stack)
 	}
 }
 
-int	is_sortded(t_node *stack)
+int	is_sorted(t_node *stack)
 {
 	if (!stack)
 		return (1);
