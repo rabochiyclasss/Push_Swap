@@ -6,7 +6,7 @@
 /*   By: ivanbudko <ivanbudko@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 15:07:50 by ivanbudko         #+#    #+#             */
-/*   Updated: 2025/06/28 19:35:28 by ivanbudko        ###   ########.fr       */
+/*   Updated: 2025/06/28 19:46:07 by ivanbudko        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	sort_large(t_node **a, t_node **b)//add .h
 
 void	turk_sort(t_node **stack_a, t_node **stack_b)//add. h
 {
-	t_cost	*min_cost;
+	t_cost	min_cost;
 	
 	initial_push_to_b(stack_a, stack_b);
 	sort_three(stack_a);
