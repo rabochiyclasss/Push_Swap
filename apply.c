@@ -6,7 +6,7 @@
 /*   By: ivanbudko <ivanbudko@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 15:55:41 by ivanbudko         #+#    #+#             */
-/*   Updated: 2025/07/14 15:55:49 by ivanbudko        ###   ########.fr       */
+/*   Updated: 2025/07/14 16:07:18 by ivanbudko        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,4 +106,24 @@ void	apply_rotations(t_node **stack_a, t_node **stack_b, t_cost cost)
 		apply_rotations_case2(stack_a, stack_b, pos_a, pos_b);
 	else
 		apply_rotations_mixed(stack_a, stack_b, pos_a, pos_b);
+}
+
+/* Position the stack so that the smallest element is on top */
+void	final_rotate(t_node **stack_a)
+{
+	int	smallest_pos;
+	int	size;
+
+	size = stack_size(*stack_a);
+	smallest_pos = find_position(*stack_a, find_smallest_index(*stack_a));
+	if (smallest_pos <= size / 2)
+	{
+		while (smallest_pos-- > 0)
+			ra(stack_a);
+	}
+	else
+	{
+		while (smallest_pos++ < size)
+			rra(stack_a);
+	}
 }
