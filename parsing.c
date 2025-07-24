@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibudko <ibudko@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ivanbudko <ivanbudko@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 15:28:33 by ibudko            #+#    #+#             */
-/*   Updated: 2025/06/25 19:25:28 by ibudko           ###   ########.fr       */
+/*   Updated: 2025/07/24 13:10:17 by ivanbudko        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ static void	check_duplicates(t_node *a)
 				exit_error(&a);
 			compare = compare->next;
 		}
+		current = current->next;
 	}
 }
 

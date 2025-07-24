@@ -6,7 +6,7 @@
 /*   By: ivanbudko <ivanbudko@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 10:46:08 by student           #+#    #+#             */
-/*   Updated: 2025/07/14 16:12:57 by ivanbudko        ###   ########.fr       */
+/*   Updated: 2025/07/24 13:05:14 by ivanbudko        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	sort_three(t_node **a)
 		sa(a);
 		rra(a);
 	}
-	else if (first > second && second < third && first > third)
+	else if (first > second && second < third && first < third)
 		ra(a);
 	else if (first < second && second > third && first > third)
 	{

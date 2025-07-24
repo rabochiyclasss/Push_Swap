@@ -6,7 +6,7 @@
 /*   By: ivanbudko <ivanbudko@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 15:55:41 by ivanbudko         #+#    #+#             */
-/*   Updated: 2025/07/14 16:07:18 by ivanbudko        ###   ########.fr       */
+/*   Updated: 2025/07/24 13:14:09 by ivanbudko        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,16 @@ void	apply_rotations_case2(t_node **a, t_node **b, int pos_a, int pos_b)
 	size_a = stack_size(*a);
 	size_b = stack_size(*b);
 	apply_double_rev_rotations(a, b, &pos_a, &pos_b);
-	while (pos_a++ < size_a)
+	while (pos_a < size_a)
+	{
 		rra(a);
-	while (pos_b++ < size_b)
-		rrb(b);
+		pos_a++;
+	}
+	while (pos_b < size_b)
+		{
+			rrb(b);
+			pos_b++;
+		}
 }
 
 /* Apply rotations based on cost */
@@ -74,10 +80,16 @@ void	apply_rotations_mixed(t_node **a, t_node **b, int pos_a, int pos_b)
 	size_b = stack_size(*b);
 	if (pos_a <= size_a / 2 && pos_b > size_b / 2)
 	{
-		while (pos_a-- > 0)
+		while (pos_a > 0)
+		{
 			ra(a);
-		while (pos_b++ < size_b)
+			pos_a--;
+		}
+		while (pos_b < size_b)
+		{
 			rrb(b);
+			pos_b++;
+		}
 	}
 	else
 	{

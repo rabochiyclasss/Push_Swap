@@ -6,7 +6,7 @@
 /*   By: ivanbudko <ivanbudko@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 15:09:44 by ibudko            #+#    #+#             */
-/*   Updated: 2025/07/14 16:15:17 by ivanbudko        ###   ########.fr       */
+/*   Updated: 2025/07/24 12:32:35 by ivanbudko        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include "../libft/libft.h"
-# include "ft_printf/ft_printf.h"
+# include "../ft_printf/ft_printf.h"
 
 # define INT_MAX	2147483647
 # define INT_MIN	-2147483648
