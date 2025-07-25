@@ -6,7 +6,7 @@
 /*   By: student <student@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 19:26:13 by ibudko            #+#    #+#             */
-/*   Updated: 2025/06/26 14:52:31 by student          ###   ########.fr       */
+/*   Updated: 2025/07/25 13:27:39 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	exit_simple_error(void)
 {
-	ft_printf("Error\n");
+	write(2, "Error\n", 6);
 	exit(EXIT_FAILURE);
 }
 
@@ -22,7 +22,7 @@ void	exit_error(t_node **a)
 {
 	if (a)
 		free_stack(a);
-	ft_printf("Error\n");
+	write(2, "Error\n", 6);
 	exit(EXIT_FAILURE);
 }
 
