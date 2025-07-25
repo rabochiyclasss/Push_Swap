@@ -47,7 +47,6 @@ fclean: clean
 	rm -f $(NAME)
 	make -C $(LIBFT_DIR) fclean
 	make -C $(PRINTF_DIR) fclean
-	@rm -f $(PRINTF_DIR)/__SYMDEF*
 
 re: fclean all
 
