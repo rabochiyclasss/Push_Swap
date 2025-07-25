@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanbudko <ivanbudko@student.42.fr>        +#+  +:+       +#+        */
+/*   By: student <student@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 15:28:33 by ibudko            #+#    #+#             */
-/*   Updated: 2025/07/24 13:10:17 by ivanbudko        ###   ########.fr       */
+/*   Updated: 2025/07/25 14:17:11 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ static int	safe_atoi(const char *str)
 			sign = -1;
 		str++;
 	}
+	if (!*str)
+		exit_simple_error();
 	while (*str)
 	{
 		if (*str < '0' || *str > '9')
