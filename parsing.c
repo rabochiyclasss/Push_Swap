@@ -6,7 +6,7 @@
 /*   By: student <student@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 15:28:33 by ibudko            #+#    #+#             */
-/*   Updated: 2025/07/25 14:17:11 by student          ###   ########.fr       */
+/*   Updated: 2025/07/27 18:07:39 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static int	is_all_space(const char *str)
 {
 	while (*str)
 	{
-		if (*str != ' ' && *str != '\t')/// mb more comditions??? '\r'????
+		if (*str != ' ' && *str != '\t')
 			return (0);
 		str++;
 	}
@@ -105,13 +105,13 @@ int	parse_args(int argc, char **argv, t_node **a)
 			exit_simple_error();
 		split = ft_split(argv[i], ' ');
 		if (!split)
-			exit_error(a);//why we then free a not split?
+			exit_error(a);
 		j = 0;
 		while (split[j])
 		{
 			num = safe_atoi(split[j]);
 			append_node(a, num);
-			free(split[j++]);// is it the same as j++?
+			free(split[j++]);
 		}
 		free(split);
 		i++;

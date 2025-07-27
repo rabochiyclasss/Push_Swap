@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   apply.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanbudko <ivanbudko@student.42.fr>        +#+  +:+       +#+        */
+/*   By: student <student@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 15:55:41 by ivanbudko         #+#    #+#             */
-/*   Updated: 2025/07/24 13:14:09 by ivanbudko        ###   ########.fr       */
+/*   Updated: 2025/07/27 18:11:37 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/* Apply double rotations as needed */
 void	apply_double_rotations(t_node **a, t_node **b, int *pos_a, int *pos_b)
 {
 	while (*pos_a > 0 && *pos_b > 0)
@@ -23,7 +22,6 @@ void	apply_double_rotations(t_node **a, t_node **b, int *pos_a, int *pos_b)
 	}
 }
 
-/* Apply double reverse rotations as needed */
 void	apply_double_rev_rotations(t_node **a, t_node **b, int *pos_a, int *pos_b)
 {
 	int	size_a;
@@ -39,7 +37,6 @@ void	apply_double_rev_rotations(t_node **a, t_node **b, int *pos_a, int *pos_b)
 	}
 }
 
-/* Apply rotations based on cost */
 void	apply_rotations_case1(t_node **a, t_node **b, int pos_a, int pos_b)
 {
 	apply_double_rotations(a, b, &pos_a, &pos_b);
@@ -49,7 +46,6 @@ void	apply_rotations_case1(t_node **a, t_node **b, int pos_a, int pos_b)
 		rb(b);
 }
 
-/* Apply rotations based on cost */
 void	apply_rotations_case2(t_node **a, t_node **b, int pos_a, int pos_b)
 {
 	int	size_a;
@@ -70,7 +66,6 @@ void	apply_rotations_case2(t_node **a, t_node **b, int pos_a, int pos_b)
 		}
 }
 
-/* Apply rotations based on cost */
 void	apply_rotations_mixed(t_node **a, t_node **b, int pos_a, int pos_b)
 {
 	int	size_a;
@@ -100,7 +95,6 @@ void	apply_rotations_mixed(t_node **a, t_node **b, int pos_a, int pos_b)
 	}
 }
 
-/* Apply rotation operations as needed */
 void	apply_rotations(t_node **stack_a, t_node **stack_b, t_cost cost)
 {
 	int	pos_a;
@@ -120,7 +114,6 @@ void	apply_rotations(t_node **stack_a, t_node **stack_b, t_cost cost)
 		apply_rotations_mixed(stack_a, stack_b, pos_a, pos_b);
 }
 
-/* Position the stack so that the smallest element is on top */
 void	final_rotate(t_node **stack_a)
 {
 	int	smallest_pos;

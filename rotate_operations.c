@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   rotate_operations.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanbudko <ivanbudko@student.42.fr>        +#+  +:+       +#+        */
+/*   By: student <student@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 16:12:03 by ivanbudko         #+#    #+#             */
-/*   Updated: 2025/06/28 13:40:11 by ivanbudko        ###   ########.fr       */
+/*   Updated: 2025/07/27 18:08:48 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rotate(t_node **stack)//add to .h
+void	rotate(t_node **stack)
 {
 	t_node *last;
 	t_node *first;

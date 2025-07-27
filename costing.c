@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   costing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanbudko <ivanbudko@student.42.fr>        +#+  +:+       +#+        */
+/*   By: student <student@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 19:45:42 by ivanbudko         #+#    #+#             */
-/*   Updated: 2025/07/14 15:51:37 by ivanbudko        ###   ########.fr       */
+/*   Updated: 2025/07/27 18:10:10 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ t_cost	calculate_cost(t_node *stack_a, t_node *stack_b, int pos_b)
 {
 	t_cost	cost;
 	
-	cost = set_cost_values(stack_a, stack_b, pos_b);//2.1.1
-	calculate_total_cost(&cost);//2.1.2
+	cost = set_cost_values(stack_a, stack_b, pos_b);
+	calculate_total_cost(&cost);
 	return (cost);
 }
-/* Calculate total cost for moving element */
+
 void	calculate_total_cost(t_cost *cost)
 {
 	int	cost1;

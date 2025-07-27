@@ -6,7 +6,7 @@
 /*   By: student <student@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 10:46:08 by student           #+#    #+#             */
-/*   Updated: 2025/07/25 14:33:55 by student          ###   ########.fr       */
+/*   Updated: 2025/07/27 18:08:24 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	sort_two(t_node **a)
 		sa(a);
 }
 
-int	find_min_pos(t_node *stack)// finds the position of the node with smallest value
+int	find_min_pos(t_node *stack)
 {
 	int		min;
 	int		pos;
@@ -74,7 +74,7 @@ void	sort_three(t_node **a)
 		rra(a);
 }
 
-void	sort_four(t_node **a, t_node **b)//add .h
+void	sort_four(t_node **a, t_node **b)
 {
 	int	min_pos;
 	
@@ -93,7 +93,7 @@ void	sort_four(t_node **a, t_node **b)//add .h
 	pa(a, b);
 }
 
-void	sort_five(t_node **a, t_node **b)//add .h
+void	sort_five(t_node **a, t_node **b)
 {
 	int	min_pos;
 	

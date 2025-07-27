@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   large_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanbudko <ivanbudko@student.42.fr>        +#+  +:+       +#+        */
+/*   By: student <student@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 15:07:50 by ivanbudko         #+#    #+#             */
-/*   Updated: 2025/07/14 16:13:33 by ivanbudko        ###   ########.fr       */
+/*   Updated: 2025/07/27 18:09:26 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort_large(t_node **a, t_node **b)//add .h
+void	sort_large(t_node **a, t_node **b)
 {
 	assign_index(*a);
 	turk_sort(a, b);
 }
 
-void	turk_sort(t_node **stack_a, t_node **stack_b)//add. h
+void	turk_sort(t_node **stack_a, t_node **stack_b)
 {
 	t_cost	min_cost;
 	
@@ -26,11 +26,11 @@ void	turk_sort(t_node **stack_a, t_node **stack_b)//add. h
 	sort_three(stack_a);
 	while (*stack_b)
 	{
-		min_cost = find_min_cost_element(*stack_a, *stack_b);//2
-		apply_rotations(stack_a, stack_b, min_cost);//3
+		min_cost = find_min_cost_element(*stack_a, *stack_b);
+		apply_rotations(stack_a, stack_b, min_cost);
 		pa(stack_a, stack_b);
 	}
-	final_rotate(stack_a);//4
+	final_rotate(stack_a);
 }
 
 void	initial_push_to_b(t_node **stack_a, t_node **stack_b)
@@ -47,7 +47,7 @@ void	initial_push_to_b(t_node **stack_a, t_node **stack_b)
 		pushed++;
 	}
 }
-//in ideal case it will run size - 3 operations which means we pushed all elements otherwise size operations
+
 void	push_first_half(t_node **a, t_node **b, int size, int *pushed)
 {
 	int	i;

@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   find.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivanbudko <ivanbudko@student.42.fr>        +#+  +:+       +#+        */
+/*   By: student <student@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 15:52:23 by ivanbudko         #+#    #+#             */
-/*   Updated: 2025/07/14 15:54:07 by ivanbudko        ###   ########.fr       */
+/*   Updated: 2025/07/27 18:09:58 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/* Return maximum of two integers */
 int	ft_max(int a, int b)
 {
 	if (a > b)
@@ -20,7 +19,6 @@ int	ft_max(int a, int b)
 	return (b);
 }
 
-/* Return minimum of two integers */
 int	ft_min(int a, int b)
 {
 	if (a < b)
@@ -43,7 +41,6 @@ int	find_position(t_node *stack, int index)
 	return (-1);
 }
 
-/* Find smallest index in stack */
 int	find_smallest_index(t_node *stack)
 {
 	int	smallest;
@@ -59,7 +56,7 @@ int	find_smallest_index(t_node *stack)
 	}
 	return (smallest);
 }
-/* Find the target position in stack_a for an element from stack_b */
+
 int	find_target_position(t_node *stack_a, int index_b)
 {
 	t_node	*current;
@@ -105,7 +102,6 @@ t_cost	find_min_cost_element(t_node *stack_a, t_node *stack_b)
 	return (min_cost);
 }
 
-/* Find largest index in stack */
 int	find_largest_index(t_node *stack)
 {
 	int	largest;
