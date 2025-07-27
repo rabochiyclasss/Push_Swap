@@ -6,7 +6,7 @@
 /*   By: ivanbudko <ivanbudko@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 14:33:22 by ivanbudko         #+#    #+#             */
-/*   Updated: 2025/06/28 15:04:53 by ivanbudko        ###   ########.fr       */
+/*   Updated: 2025/07/27 23:20:58 by ivanbudko        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ void	push(t_node **dst, t_node **src)
 void	pa(t_node **a, t_node **b)
 {
 	push(a, b);
-	ft_printf("pa\n");
+	write(1, "pa\n", 3);
 }
 
 void	pb(t_node **a, t_node **b)
 {
 	push(b, a);
-	ft_printf("pb\n");
+	write(1, "pb\n", 3);
 }

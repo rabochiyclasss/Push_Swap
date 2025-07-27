@@ -6,7 +6,7 @@
 /*   By: ivanbudko <ivanbudko@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 14:10:52 by ivanbudko         #+#    #+#             */
-/*   Updated: 2025/06/28 14:30:57 by ivanbudko        ###   ########.fr       */
+/*   Updated: 2025/07/27 23:19:14 by ivanbudko        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,18 +29,18 @@ void	swap(t_node **stack)
 void	sa(t_node **a)
 {
 	swap(a);
-	ft_printf("sa\n");
+	write(1, "sa\n", 3);
 }
 
 void	sb(t_node **b)
 {
 	swap(b);
-	ft_printf("sb\n");
+	write(1, "sb\n", 3);
 }
 
 void	ss(t_node **a, t_node **b)
 {
 	swap(a);
 	swap(b);
-	ft_printf("ss\n");
+	write(1, "ss\n", 3);
 }
